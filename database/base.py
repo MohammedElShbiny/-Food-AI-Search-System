@@ -23,3 +23,19 @@ class DatabaseInterface(ABC):
     @abstractmethod
     def food_exists(self, food_id: str) -> bool:
         pass
+
+    @abstractmethod
+    def get_table_info(self) -> list[dict]:
+        pass
+
+    @abstractmethod
+    def get_table_data(self, table_name: str, page: int = 1, per_page: int = 50) -> dict:
+        pass
+
+    @abstractmethod
+    def get_db_stats(self) -> dict:
+        pass
+
+    @abstractmethod
+    def execute_readonly_query(self, sql: str) -> dict:
+        pass

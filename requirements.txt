@@ -4,3 +4,7 @@ pydantic
 python-dotenv
 click
 aiofiles
+httpx
+beautifulsoup4
+lxml
+psutil
